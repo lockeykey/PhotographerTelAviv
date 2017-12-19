@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Photographer Tel Aviv</title>
+	
+    <link rel="stylesheet" type="text/css" href="styles/normalize.css">
+    <link rel="stylesheet" type="text/css" href="styles/portfolioStylesMain.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    
+    </head>
+    <body>
+        <header>
+           <div class="logo">
+            <a  class='logo' href="index.html"> 
+                <img src="images/logo_andrew_semko_logo1.png" alt='logo'>
+            </a>
+        </div>
+        </header>
+        <nav id="stickyNav">
+                  
+            <ul class="menu topnav" id="myTopnav">
+                 
+                  <li class="menuItem" onclick="activeMenuItem(event, 'Home')">
+                        <a href="#home" class="menuItemLink">Home</a>
+                  </li>
+                   <li class="menuItem" onclick="activeMenuItem(event, 'Portfolio')">        
+                           <a href="#portfolio" class="menuItemLink">Portfolio</a>
+                   </li>
+                   <li class="menuItem" onclick="activeMenuItem(event, 'Blog')">
+                        <a href="#blog" class="menuItemLink">Blog</a>
+                    </li>
+                   <li class="menuItem" onclick="activeMenuItem(event, 'Services')">
+                        <a href="#services" class="menuItemLink">Services</a>
+                   </li>
+                   <li class="menuItem" onclick="activeMenuItem(event, 'Contacts')">
+                        <a href="#contacts" class="menuItemLink">Contacts</a>
+                   </li>
+            
+            </ul>
+            
+             
+<div class="burgerContainer icon" onclick="burgerAnimate(this)">
+                  <div class="bar1"></div>
+                  <div class="bar2"></div>
+                  <div class="bar3"></div>
+           </div>
+           <div class="respMenuWrapper" id="animatedMenuWrap">
+            </div>
+       
+           <!-- </div>-->
+        </nav>
+        <!--PORTFOLIO SECTION-->
+        <div class="portfolioWrap"> 
+        <section class="portfolio">
+        
+        <main id="portfolioCards" class="grid">
+           <template v-for="card in cards">
+            <div class="gridItem" >
+                <div class="cardImgWrap">
+                     <div class="prewiewWrap">
+                      <img class="cardImg" v-bind:src="card.imageSource" v-bind:alt="card.imageAlt" />
+                      <div class="storyDescriptionOverlay"><p>{{ card.storyDescription }}
+          </p>
+                     </div>
+                      </div>
+          </div>
+                <a v-bind:href="card.storyLink" class="linkToStory"><h2> {{ card.storyHeader }}</h2></a>
+              
+          </div>
+            </template>
+           
+</main>
+
+       </section>
+        </div>
+        
+        
+        <!--ABOUT Me-->
+        <section class="about infoPage">
+        <div class="infoPageWrap">
+           
+            <article>
+               <div class="sectionTitleWrap">
+                <h2 class="sectionTitle">About Me</h2>
+                </div>
+                <img class="authorPhotograph"
+           src="images/author-photo.jpg">
+           <div class="articleText">
+              <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+              </p>
+               <p class="highlightText">
+                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+               </p>
+                       <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+              </p>
+           </div>
+           </article>   
+        </div>
+        </section>
+        <!--Contact Form-->
+                
+        <section class="infoPage" onload="firstfocus()">
+            <div class="infoPageWrap" id="feedbackForm">
+               
+                <div class="sectionTitleWrap">
+                <h2 class="sectionTitle">Create your own family story, contact me</h2>
+                </div>
+                
+                   <form name="feedback" class="feedbackForm">
+                        
+                       
+                        <p><label for="userName">Your name&colon;</label>
+                        <input type="text" placeholder="Only A-B" name="userName" size="30" onblur="allLetter()" required /></p>
+                   
+                        <p><label for="phone">Phone&colon;</label>
+                        <input type="tel" placeholder="+123-123-456-7891"
+                        pattern="\+\d{3}-\d{3}-\d{3}-\d{4}" id="phone" name="phone" required /> </p>
+
+                       
+                        <!--<label class="labelforEmail">E-mail</label>
+                        <input type="email" v-model="email">-->
+                        <p><label for="desc">Your question&colon;</label>
+                        <textarea name="desc" id="desc" maxlength="400" ></textarea></p>
+                    
+                        
+                       <input type="submit" class="submitButton" name="submit" value="Submit" onclick="alert('We'll call you as soon as possible)" />
+                       
+                </form>
+            </div>
+        </section>
+        <section class="footer">
+            <div class="footerWrap">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                
+            </div>
+        </section>
+        <script src="js/vue.js"></script>
+        <script src="js/portfolioGalleryRender.js"></script>
+        <script src="js/stickyNav.js"></script>
+        <script src="js/burgerAnimate.js"></script>
+        <script src="js/menuItemsOnClickActive.js"></script>
+    </body>
+    

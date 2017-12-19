@@ -1,0 +1,43 @@
+/*main container for each single block of information e.g About me, feedback form*/
+.infoPage
+    background-color: $background-color
+    padding: 20px 0 50px 0
+.infoPageWrap
+    background-color: $second-background-color
+    box-shadow: $box-shadow
+    width: 45%
+    margin: 0 auto
+    padding: 50px 60px
+    +resp(small)
+        padding: 30px 10px
+        width: 90%
+    +resp(smallmedium)
+        padding: 40px 30px 
+        width: 50%
+/*main title for each single block of information e.g About me, feedback form*/   
+.sectionTitle
+    border-bottom: 2px solid $accent-color
+    display: inline-block
+    margin: 0 0 -2px 0
+    padding: 5px 0
+    z-index: 2
+    font-size: 0.875em
+    @include basicTextStyle ($darkest-text-color, 'Open Sans Bold')
+        
+.sectionTitleWrap
+    border-bottom: 1px solid $background-color
+    padding: 0
+    z-index: 1
+    
+/*quotes and important parargraphs of article */
+.highlightText
+    background: $highlightText
+    border-left: 2px solid $accent-color
+    box-sizing: border-box
+    padding: 10px 20px
+    margin: 20px 0
+    font-size: .8em
+    @include basicTextStyle ($darkest-text-color, 'Open Sans Light')
+        
+
+
