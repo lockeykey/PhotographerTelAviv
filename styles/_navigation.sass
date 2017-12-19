@@ -1,0 +1,51 @@
+nav
+    background-color: $background-color
+    padding: 40px 0
+    position: relative
+    z-index: 3
+.stickyBlock
+    position: fixed
+    padding: 15px 0
+    top: 0
+    width: 100%
+    box-shadow: $box-shadow
+
+@media screen and (max-width: $smallmedium)
+    nav
+        padding: 25px
+
+.menu
+    margin: 0 auto
+    list-style: none
+    text-align: center
+.menuItem
+    display: inline-block
+    margin: 5px 10px
+.menuItem:first-child
+    margin-left: -10px
+    +resp(xsmall)
+        margin: 5px 10px
+    +resp(small)
+        margin: 5px 10px
+    +resp(smallmedium)
+        margin: 5px 10px
+        
+.menuItemLink
+    padding: 5px 15px
+    text-decoration: none
+    transition: All 0.8s ease
+    border: 1px solid $background-color
+    border-radius: 2px
+    font-family: 'Open Sans Light'
+    color: $mid-text-color
+    &:hover
+        color: $accent-color
+    
+.active
+    border: 1px solid $accent-color
+    color: $accent-color
+
+
+
+    
+    
