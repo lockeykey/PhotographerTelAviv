@@ -9,7 +9,7 @@ new Vue({
            storyHeader: 'Lorem ipsum',
            StoryLink: '#'
           },
-          {imageSource: '../images/hry2of5.jpg',
+          {imageSource: './images/hry2of5.jpg',
            imageAlt: 'hrystya2',
            storyDescription: 'апмLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
            storyHeader: 'Incididunt ut labore',

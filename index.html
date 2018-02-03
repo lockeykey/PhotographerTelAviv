@@ -113,17 +113,17 @@
                         
                        
                         <p><label for="userName">Your name&colon;</label>
-                        <input type="text" placeholder="Only A-B" name="userName" size="30" onblur="allLetter()" required /></p>
+                        <input type="text" placeholder="Use only A-Z" name="userName" size="30" onblur="allLetter()" required /></p>
                    
                         <p><label for="phone">Phone&colon;</label>
-                        <input type="tel" placeholder="+123-123-456-7891"
-                        pattern="\+\d{3}-\d{3}-\d{3}-\d{4}" id="phone" name="phone" required /> </p>
+                        <input type="tel" placeholder="+XXX-XX-XXX-XXXX"
+                        pattern="\+\d{3}-\d{2}-\d{3}-\d{4}" id="phone" name="phone" class="masked" required /> </p>
 
                        
                         <!--<label class="labelforEmail">E-mail</label>
                         <input type="email" v-model="email">-->
                         <p><label for="desc">Your question&colon;</label>
-                        <textarea name="desc" id="desc" maxlength="400" ></textarea></p>
+                        <textarea name="desc" id="desc" ></textarea></p>
                     
                         
                        <input type="submit" class="submitButton" name="submit" value="Submit" onclick="alert('We'll call you as soon as possible)" />
@@ -139,10 +139,11 @@
                 
             </div>
         </section>
-        <script src="js/vue.js"></script>
-        <script src="js/portfolioGalleryRender.js"></script>
+        <script src="js/vue.min.js"></script>
         <script src="js/stickyNav.js"></script>
+        <script src="js/portfolioGalleryRender.js"></script>
         <script src="js/burgerAnimate.js"></script>
         <script src="js/menuItemsOnClickActive.js"></script>
+        <script src="js/masking-input.js" data-autoinit="true"></script>`
     </body>
     

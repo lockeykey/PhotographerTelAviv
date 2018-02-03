@@ -31,15 +31,21 @@
         display: block
         position: static
         width: 100%
-input:focus, textarea:focus
-    outline: none
-    box-shadow: $box-shadow
-    border: 1px solid $mid-text-color  
+    +resp(medium)
+        display: block
+        position: static
+        width: 100%
 textarea
     height: 70px
     resize: none
     margin-bottom: 25px
-    z-index: 1.5
+    
+input:focus, textarea:focus
+    box-shadow: $box-shadow
+    border: 1px solid $background-color  
+    outline: none
+
+    
 
 .submitButton
     background-color: $second-background-color
@@ -57,3 +63,5 @@ textarea
 .submitButton:hover
     border-color: $darkest-text-color
     color: $darkest-text-color
+    
+    
